@@ -6,9 +6,10 @@
     transition: background-color 2s;
 }
 
-.ex-1-square:hover{
+.ex-1-square:hover {
     background-color: red;
 }
+
 /* EX-2 */
 .ex-2-square {
     width: 100px;
@@ -17,7 +18,7 @@
     transition: width 2s;
 }
 
-.ex-2-square:active{
+.ex-2-square:active {
     width: 100%;
 }
 
@@ -30,7 +31,7 @@
     transition: border-radius 1s;
 }
 
-.ex-3-square:hover{
+.ex-3-square:hover {
     border-radius: 100%;
 }
 
@@ -43,7 +44,7 @@
     transition: background-color 1s;
 }
 
-.ex-4-square:hover{
+.ex-4-square:hover {
     background-color: transparent;
 }
 
@@ -57,44 +58,46 @@
     transition: all 1s;
 }
 
-.ex-5-square:hover{
+.ex-5-square:hover {
     scale: 2;
 }
 
-.ex-5-square:active{
+.ex-5-square:active {
     scale: 0.5;
 }
 
 /* EX-6-7-8 */
 
-.ex-6-img, .ex-7-img, .ex-8-img {
+.ex-6-img,
+.ex-7-img,
+.ex-8-img {
     width: 500px;
 }
 
 /* EX-6 */
 
-.ex-6-img:hover{
+.ex-6-img:hover {
     filter: grayscale(1);
 }
 
 /* EX-7 */
 
-.ex-7-img{
+.ex-7-img {
     transition: filter 2s;
 }
 
-.ex-7-img:hover{
+.ex-7-img:hover {
     filter: grayscale(1);
 }
 
 /* EX-8 */
 
 
-.ex-8-img{
+.ex-8-img {
     transition: all 2s;
 }
 
-.ex-8-img:hover{
+.ex-8-img:hover {
     filter: sepia(1) grayscale(.5);
     border-radius: 20px;
 }
@@ -107,7 +110,7 @@
     transition: all 2s;
 }
 
-.ex-9-img:hover{
+.ex-9-img:hover {
     scale: 1.5;
     filter: sepia(1) grayscale(.5);
     border-radius: 20px;
@@ -121,10 +124,11 @@
 }
 
 @keyframes ex-10-rotation {
-    0%{
+    0% {
         transform: rotate(0);
     }
-    100%{
+
+    100% {
         transform: rotate(-360deg);
     }
 }
@@ -135,25 +139,28 @@
     font-size: 60px;
 }
 
-.ex-11-icon:hover{
+.ex-11-icon:hover {
     animation: ex-11-rotation 2s linear;
 }
 
 @keyframes ex-11-rotation {
-    0%{
+    0% {
         transform: rotate(0);
     }
-    90%{
+
+    90% {
         transform: rotate(270deg);
     }
-    100%{
+
+    100% {
         transform: rotate(0);
     }
 }
 
 /* EX-12-13 */
 
-.ex-12-button, .ex-13-button {
+.ex-12-button,
+.ex-13-button {
     position: relative;
     display: block;
     width: 200px;
@@ -166,7 +173,9 @@
     text-align: center;
     text-decoration: none;
 }
-.ex-12-top-white, .ex-13-top-white {
+
+.ex-12-top-white,
+.ex-13-top-white {
     position: absolute;
     top: -10px;
     left: 10%;
@@ -174,7 +183,9 @@
     width: 60px;
     height: 20px;
 }
-.ex-12-bottom-white, .ex-13-bottom-white {
+
+.ex-12-bottom-white,
+.ex-13-bottom-white {
     position: absolute;
     bottom: -10px;
     right: 20%;
@@ -185,34 +196,104 @@
 
 /* EX-12 */
 
-.ex-12-button:hover .ex-12-top-white{
+.ex-12-button:hover .ex-12-top-white {
     animation: ex-12-transition-top 2s linear;
 }
-.ex-12-button:hover .ex-12-bottom-white{
+
+.ex-12-button:hover .ex-12-bottom-white {
     animation: ex-12-transition-bottom 2s linear;
 }
 
 @keyframes ex-12-transition-top {
-    0%{
+    0% {
         left: 10%;
     }
-    50%{
+
+    50% {
         left: 65%;
     }
-    100%{
-        left: 10%;
-    }  
 }
+
 @keyframes ex-12-transition-bottom {
-    0%{
+    0% {
         right: 20%;
     }
-    50%{
+
+    50% {
         right: 65%;
     }
-    100%{
-        right: 20%;
-    }  
 }
 
 /* EX-13 */
+
+.ex-13-button:hover .ex-13-top-white {
+    animation: ex-13-transition-top 2s linear;
+}
+
+.ex-13-button:hover .ex-13-bottom-white {
+    animation: ex-13-transition-bottom 2s linear;
+}
+
+@keyframes ex-13-transition-top {
+    0% {
+        left: 10%;
+        top: -10px;
+    }
+
+    30% {
+        left: 80%;
+        top: -10px;
+    }
+
+    50% {
+        left: 80%;
+        top: calc(100% - 10px);
+    }
+
+    75% {
+        left: -10%;
+        top: calc(100% - 10px);
+    }
+
+    95% {
+        left: -10%;
+        top: -10px;
+    }
+
+    100% {
+        left: 10%;
+        top: -10px;
+    }
+}
+
+@keyframes ex-13-transition-bottom {
+    0% {
+        right: 20%;
+        bottom: -10px;
+    }
+
+    30% {
+        right: 80%;
+        bottom: -10px;
+    }
+
+    50% {
+        right: 80%;
+        bottom: calc(100% - 10px);
+    }
+
+    75% {
+        right: -20%;
+        bottom: calc(100% - 10px);
+    }
+
+    95% {
+        right: -20%;
+        bottom: -10px;
+    }
+
+    100% {
+        right: 20%;
+        bottom: -10px;
+    }
+}
