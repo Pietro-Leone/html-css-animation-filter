@@ -117,6 +117,16 @@
 
 .ex-10-icon {
     font-size: 60px;
+    animation: ex-10-rotation 1s linear infinite;
+}
+
+@keyframes ex-10-rotation {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
 }
 
 /* EX-11 */
